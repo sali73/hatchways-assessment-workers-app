@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import './main.js';
 import { App} from './App';
 import * as serviceMovies from './serviceMovies';
 

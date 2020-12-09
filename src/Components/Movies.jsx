@@ -9,7 +9,7 @@ export default class MoviesList extends React.Component{
             List :[],
             key_word:'',
             on:false,
-            
+
         }
     }
   componentDidMount() {
@@ -58,23 +58,19 @@ render(){
                   return (
                       <div className="Movies-list">
                           <ul className="card-body">
-
-                          <div>
-                              <li><h5 class='title'>Title : <small>{Movie.title}</small></h5></li>
-                              <li><h5>Year : <small>{Movie.year}</small></h5></li>
-                              <li><h5>Director : <small>{Movie.director}</small></h5></li>
-                              <li><h5>Rate : <small>{Movie.rate}</small></h5></li>
-                              <li><h5>Actors : <small>{Movie.actors}</small></h5></li>
-                          </div>
-
-                          <div>
-                              <li><h5><img src={Movie.photo} /></h5></li>
-                          </div>
-
-                          <div class="vid-wrap">
-                              <iframe src={Movie.vedio} frameborder="0" allowfullscreen></iframe>
-                          </div>
-
+                            <div>
+                                <li><h5 class='title'>Title : <small>{Movie.title}</small></h5></li>
+                                <li><h5>Year : <small>{Movie.year}</small></h5></li>
+                                <li><h5>Director : <small>{Movie.director}</small></h5></li>
+                                <li><h5>Rate : <small>{Movie.rate}</small></h5></li>
+                                <li><h5>Actors : <small>{Movie.actors}</small></h5></li>
+                            </div>
+                            <div>
+                                <li><h5><img src={Movie.photo} /></h5></li>
+                            </div>
+                            <div class="vid-wrap">
+                                <iframe src={Movie.vedio} frameborder="0" allowfullscreen></iframe>
+                            </div>
                           </ul>
                       </div>
                         )
