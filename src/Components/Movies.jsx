@@ -9,6 +9,7 @@ export default class MoviesList extends React.Component{
             List :[],
             key_word:'',
             on:false,
+            
         }
     }
   componentDidMount() {
@@ -82,7 +83,6 @@ render(){
                 </article>
                 <div class="footer">
                   <h1> @2020 by <a href="https://salimohamed.me/">Sali Mohamed </a></h1>
-
                 </div>
 
 

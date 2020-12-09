@@ -40,7 +40,7 @@ body {
 
 .main {
   padding: 7.5em 0 4.5em;
-  margin-top: 480px;
+  margin-top: 450px;
   padding: 30px ;
 }
 
@@ -76,7 +76,7 @@ div li{
   color: white;
 }
 div h5{
-  font-size: 30px;
+  font-size: 25px;
 }
 .title{
   font-size: 48px;
@@ -85,7 +85,4 @@ div h5{
 .card-body img {
   width: 250px;
   height: 180px;
-}
-.vid-wrap{
-
 }
