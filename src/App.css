@@ -1,34 +1,57 @@
-*{
-   font-size: large;
-   font-family: "Al Bayan";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 400ms cubic-bezier(.25,.37,.17,.96);
 }
-ul{
-  height: 220px;
-  background-color: lightgray;
-  margin: 30px;
-  list-style: none;
+
+/* When header is not in viewport we hide it */
+.header[data-scroll="out"] {
+  transform: translatey(-100%);
 }
-div .Movies-list{
-  background-color: #282c34;
-  display: flex;
-  flex-direction: row;
-  color: #282c34;
+
+/* When moving up and header we show it */
+[data-scroll-dir-y="-1"] .header {
+  transform: translatey(0);
 }
-form{
-  height: 140px;
-  background-color: lightgray ;
-  padding: 30px;
-  text-align: center;
+
+html {
+  font-size: 110%;
 }
-.form-control{
-  width: 400px;
-  margin: auto;
+
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.45;
+  background-image: url('https://cdn2.vectorstock.com/i/1000x1000/52/61/movie-cinema-poster-flying-popcorn-tape-vector-27045261.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.header {
+  padding: .5em 0;
+  color: #fff;
+  background-color: brown;
+}
+
+.main {
+  padding: 7.5em 0 4.5em;
+  margin-top: 490px;
+  padding: 30px ;
+}
+
+.footer {
+  padding: .5em 0;
+  color: #fff;
+  background-color: brown;
+  
 }

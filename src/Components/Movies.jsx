@@ -39,32 +39,48 @@ searchMovies = (keyWord) => {
 
 render(){
         return(
-            <div className="container-fluid">
-                <form>
-                    <h2>movies List! </h2>
+            <>
+              <div class="header" data-scroll>
+                  <h1>Movies</h1>
+              </div>
+
+              <main class="main">
+                <p>
+                  <span class="input">
                     <input className="form-control form-control-lg" type="text"  onChange={this.searchHandler} placeholder="Search by title..."
-                           value={this.state.key_word}/>
-                </form>
-
-                <div className="card">
+                               value={this.state.key_word}/>
+                    <span></span>
+                 </span>
+                </p>
+              </main>
+              <div className="card">
                     {this.state.Movies.filter(this.searchMovies(this.state.key_word)).map(Movie=>{
-                        return (
-                            <div className="Movies-list">
-                                <ul className="card-body">
-                                   <li><h5>title : <small>{Movie.title}</small></h5></li>
-                                   <li><h5>photo: <small>{Movie.photo}</small></h5></li>
-                                   <li><h5>year : <small>{Movie.year}</small></h5></li>
-                                   <li><h5>vedio : <small>{Movie.vedio}</small></h5></li>
-                                   <li><h5>director : <small>{Movie.director}</small></h5></li>
-                                   <li><h5>rate : <small>{Movie.rate}</small></h5></li>
-
-                                </ul>
-                            </div>
+                  return (
+                      <div className="Movies-list">
+                          <ul className="card-body">
+                              <li><h5>title : <small>{Movie.title}</small></h5></li>
+                              <li><h5>photo: <small>{Movie.photo}</small></h5></li>
+                              <li><h5>year : <small>{Movie.year}</small></h5></li>
+                              <div class="vid-wrap">
+                                  <iframe src="https://www.youtube.com/embed/wp43OdtAAkM" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <li><h5>director : <small>{Movie.director}</small></h5></li>
+                              <li><h5>rate : <small>{Movie.rate}</small></h5></li>
+                          </ul>
+                      </div>
                         )
-                    })
+                      })
                     }
-                    </div>
-            </div>
+                  </div>
+
+
+                  <div class="footer">
+        <div class="container">
+          <h1>Footer</h1>
+          <p>Now let's go 👆 to see the header come back</p>
+        </div>
+      </div>
+          </>
         )
     }
 }
