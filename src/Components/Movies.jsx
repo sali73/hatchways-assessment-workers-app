@@ -36,12 +36,11 @@ searchMovies = (keyWord) => {
         return x.title.toLowerCase().includes(keyWord.toLowerCase())|| !keyWord;
     }
 }
-
 render(){
         return(
             <>
               <div class="header" data-scroll>
-                  <h1>Movies</h1>
+                  <h1>Movies App!</h1>
               </div>
 
               <main class="main">
@@ -53,34 +52,42 @@ render(){
                  </span>
                 </p>
               </main>
-              <div className="card">
+              <article className="card">
                     {this.state.Movies.filter(this.searchMovies(this.state.key_word)).map(Movie=>{
                   return (
                       <div className="Movies-list">
                           <ul className="card-body">
-                              <li><h5>title : <small>{Movie.title}</small></h5></li>
-                              <li><h5>photo: <small>{Movie.photo}</small></h5></li>
-                              <li><h5>year : <small>{Movie.year}</small></h5></li>
-                              <div class="vid-wrap">
-                                  <iframe src="https://www.youtube.com/embed/wp43OdtAAkM" frameborder="0" allowfullscreen></iframe>
-                              </div>
-                              <li><h5>director : <small>{Movie.director}</small></h5></li>
-                              <li><h5>rate : <small>{Movie.rate}</small></h5></li>
+
+                          <div>
+                              <li><h5 class='title'>Title : <small>{Movie.title}</small></h5></li>
+                              <li><h5>Year : <small>{Movie.year}</small></h5></li>
+                              <li><h5>Director : <small>{Movie.director}</small></h5></li>
+                              <li><h5>Rate : <small>{Movie.rate}</small></h5></li>
+                              <li><h5>Actors : <small>{Movie.actors}</small></h5></li>
+                          </div>
+
+                          <div>
+                              <li><h5><img src={Movie.photo} /></h5></li>
+                          </div>
+
+                          <div class="vid-wrap">
+                              <iframe src={Movie.vedio} frameborder="0" allowfullscreen></iframe>
+                          </div>
+
                           </ul>
                       </div>
                         )
                       })
                     }
-                  </div>
+                </article>
+                <div class="footer">
+                  <h1> @2020 by <a href="https://salimohamed.me/">Sali Mohamed </a></h1>
+
+                </div>
 
 
-                  <div class="footer">
-        <div class="container">
-          <h1>Footer</h1>
-          <p>Now let's go 👆 to see the header come back</p>
-        </div>
-      </div>
-          </>
+
+  </>
         )
     }
 }
